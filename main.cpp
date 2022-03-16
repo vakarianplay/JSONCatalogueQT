@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    w.setWindowTitle("JSON Pic catalogue");
+    w.setWindowTitle("Электронный каталог КМНШ.");
     w.show();
     return a.exec();
 }

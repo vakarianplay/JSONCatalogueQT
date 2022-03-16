@@ -35,12 +35,17 @@ private slots:
     void treeViewer(QJsonDocument jsonCatalog);
     void jsonOpen();
     void initUi();
+    void searching();
 
     void on_pushButton_zoomin_clicked();
 
     void on_pushButton_zoomout_clicked();
 
     void on_pushButton_zoomfit_clicked();
+
+    void on_lineEdit_search_textChanged(const QString &arg1);
+
+    void on_lineEdit_search_editingFinished();
 
 private:
     Ui::MainWindow *ui;

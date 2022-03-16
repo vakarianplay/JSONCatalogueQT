@@ -19,20 +19,33 @@ void MainWindow::initUi()
     ui->pushButton_zoomin->setIcon(QIcon(":/icons/zoom-in.png"));
     ui->pushButton_zoomout->setIcon(QIcon(":/icons/zoom-out.png"));
     ui->pushButton_zoomfit->setIcon(QIcon(":/icons/fit.png"));
+    //    ui->pushButton_search->setIcon(QIcon(":/icons/search.png"));
+    QPixmap pixmap(":/icons/search.png");
+    QPixmap pixmapScaled = pixmap.scaled(QSize(15, 15),
+                                         Qt::IgnoreAspectRatio,
+                                         Qt::SmoothTransformation);
+    ui->treeWidget->setHeaderLabels({"Наименование", "Децемальный №"});
+    ui->label_dec->clear();
+    ui->label_name->clear();
+    ui->label_iconsearch->setPixmap(pixmapScaled);
 }
 
 void MainWindow::on_treeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                   QTreeWidgetItem *previous)
 {
-    QString converter = ui->treeWidget->currentItem()->text(1);
+    QString converter = ui->treeWidget->currentItem()->text(2);
 
     if (!converter.isEmpty()) {
+        ui->label_name->setText(ui->treeWidget->currentItem()->text(0));
+        ui->label_dec->setText(ui->treeWidget->currentItem()->text(1));
         imgPath = QDir::currentPath() + "/img/" + converter;
         scene->clear();
         imageViewer();
 
     } else {
         scene->clear();
+        ui->label_dec->clear();
+        ui->label_name->clear();
     }
 }
 
@@ -61,7 +74,8 @@ void MainWindow::treeViewer(QJsonDocument jsonCatalog)
             for (int j = 0; j < elementsAr.count(); j++) {
                 QTreeWidgetItem *elementsTheme = new QTreeWidgetItem(theme);
                 elementsTheme->setText(0, elementsAr.at(j).toObject().value("name").toString());
-                elementsTheme->setText(1, elementsAr.at(j).toObject().value("path").toString());
+                elementsTheme->setText(1, elementsAr.at(j).toObject().value("dec").toString());
+                elementsTheme->setText(2, elementsAr.at(j).toObject().value("path").toString());
             }
         }
     }
@@ -90,4 +104,34 @@ void MainWindow::on_pushButton_zoomout_clicked()
 void MainWindow::on_pushButton_zoomfit_clicked()
 {
     ui->graphicsView->fitInView(scene->itemsBoundingRect(), Qt::KeepAspectRatio);
+}
+
+void MainWindow::searching()
+{
+    QString searchRe = ui->lineEdit_search->text();
+    if (searchRe.isEmpty()) {
+        return;
+    }
+    QList<QTreeWidgetItem *> searchList;
+    searchList = ui->treeWidget->findItems(searchRe, Qt::MatchContains | Qt::MatchRecursive, 0);
+
+    if (searchList.isEmpty()) {
+        searchList = ui->treeWidget->findItems(searchRe, Qt::MatchContains | Qt::MatchRecursive, 1);
+    }
+
+    qDebug() << searchList;
+
+    for (QTreeWidgetItem *item : searchList) {
+        ui->treeWidget->setCurrentItem(item, 0);
+    }
+}
+
+void MainWindow::on_lineEdit_search_textChanged(const QString &arg1)
+{
+    searching();
+}
+
+void MainWindow::on_lineEdit_search_editingFinished()
+{
+    //    searching();
 }
