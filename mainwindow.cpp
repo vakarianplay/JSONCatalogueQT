@@ -19,12 +19,11 @@ void MainWindow::initUi()
     ui->pushButton_zoomin->setIcon(QIcon(":/icons/zoom-in.png"));
     ui->pushButton_zoomout->setIcon(QIcon(":/icons/zoom-out.png"));
     ui->pushButton_zoomfit->setIcon(QIcon(":/icons/fit.png"));
-    //    ui->pushButton_search->setIcon(QIcon(":/icons/search.png"));
     QPixmap pixmap(":/icons/search.png");
     QPixmap pixmapScaled = pixmap.scaled(QSize(15, 15),
                                          Qt::IgnoreAspectRatio,
                                          Qt::SmoothTransformation);
-    ui->treeWidget->setHeaderLabels({"Наименование", "Децемальный №"});
+    ui->treeWidget->setHeaderLabels({"Name", "Number"});
     ui->label_dec->clear();
     ui->label_name->clear();
     ui->label_iconsearch->setPixmap(pixmapScaled);
