@@ -1,25 +1,42 @@
 {"Base":[
-	{
-		"Theme": "Ships",
-		"Elements": [
-			{"name": "Hauler", "path": "7.jpg"},
-			{"name": "Beluga", "path": "8.jpg"},
-			{"name": "Courier", "path": "9.jpg"},
-			{"name": "Chiftain", "path": "10.jpg"},
-			{"name": "Betelgeuse 2", "path": "11.jpg"},
-			{"name": "Corvette", "path": "12.jpg"},
-			{"name": "F63 Condor", "path": "13.jpg"},
-			{"name": "Capitol", "path": "14.jpg"},
-			{"name": "Veil West Nebula", "path": "15.jpg"},
-			{"name": "Sidewinder", "path": "16.jpg"}
-		]
-	},
-	{
-		"Theme": "Screenshot",
-		"Elements": [
-			{"name": "Catalog", "path": "jsoncatalog.png"},
-            {"name": "Catalog v. 1.1", "path": "catalog11.png"}
-		]
-	}
+    {
+        "Article": [
+            {
+                "AtricleName": "324",
+                "DecArticle": "243",
+                "PathArticle": "423"
+            },
+            {
+                "AtricleName": "123",
+                "Consist": [
+                    {
+                        "Dec": "exsample",
+                        "Name": "Element one",
+                        "Path": "exp"
+                    },
+                    {
+                        "Dec": "sample data",
+                        "Name": "exp2",
+                        "Path": "sample path"
+                    }
+                ],
+                "DecArticle": "",
+                "PathArticle": "123"
+            }
+        ],
+        "DecTheme": "1",
+        "Theme": "Тема"
+    },
+    {
+        "Article": [
+            {
+                "AtricleName": "444",
+                "DecArticle": "",
+                "PathArticle": "444"
+            }
+        ],
+        "DecTheme": "",
+        "Theme": "123"
+    }
 ]
 }
