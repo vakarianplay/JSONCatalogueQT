@@ -45,13 +45,12 @@ private slots:
 
     void on_lineEdit_search_textChanged(const QString &arg1);
 
-    void on_lineEdit_search_editingFinished();
-
 private:
     Ui::MainWindow *ui;
     QTreeWidget *treeView;
     QGraphicsItem *item;
     QGraphicsScene *scene;
+    QModelIndex indexopen;
 
     double scaleFactor = 1.1;
     QString imgPath;
