@@ -2,41 +2,107 @@
     {
         "Article": [
             {
-                "AtricleName": "324",
-                "DecArticle": "243",
-                "PathArticle": "423"
-            },
-            {
-                "AtricleName": "123",
+                "AtricleName": "Federal",
                 "Consist": [
                     {
-                        "Dec": "exsample",
-                        "Name": "Element one",
-                        "Path": "exp"
+                        "Dec": "",
+                        "Name": "Corvette",
+                        "Path": "mathew-maddison-corvette-300-01.jpg"
                     },
                     {
-                        "Dec": "sample data",
-                        "Name": "exp2",
-                        "Path": "sample path"
+                        "Dec": "",
+                        "Name": "Dropship",
+                        "Path": "mathew-maddison-dropship-new-01.jpg"
                     }
                 ],
                 "DecArticle": "",
-                "PathArticle": "123"
-            }
-        ],
-        "DecTheme": "1",
-        "Theme": "Тема"
-    },
-    {
-        "Article": [
+                "PathArticle": ""
+            },
             {
-                "AtricleName": "444",
+                "AtricleName": "Imperial",
+                "Consist": [
+                    {
+                        "Dec": "",
+                        "Name": "Courier",
+                        "Path": "mathew-maddison-courier-no-watermark-01.jpg"
+                    }
+                ],
                 "DecArticle": "",
-                "PathArticle": "444"
+                "PathArticle": ""
+            },
+            {
+                "AtricleName": "Alliance",
+                "Consist": [
+                    {
+                        "Dec": "",
+                        "Name": "Chieftain",
+                        "Path": "mathew-maddison-chieftain-01.jpg"
+                    }
+                ],
+                "DecArticle": "",
+                "PathArticle": ""
+            },
+            {
+                "AtricleName": "Other ships",
+                "Consist": [
+                    {
+                        "Dec": "",
+                        "Name": "Beluga",
+                        "Path": "mathew-maddison-beluga-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Dove Enigma",
+                        "Path": "mathew-maddison-dove-enigma-poster-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Eagle MK II",
+                        "Path": "mathew-maddison-eagle-mk-ii-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "F63 Condor",
+                        "Path": "mathew-maddison-f-63-condor-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Fer-de-Lance",
+                        "Path": "mathew-maddison-fer-de-lance-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Goshawk MK II",
+                        "Path": "mathew-maddison-goshawk-mk-iii-altair-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Hauler",
+                        "Path": "mathew-maddison-hauler-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Krait II",
+                        "Path": "mathew-maddison-krait-ii-01.jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Mamba",
+                        "Path": "mathew-maddison-mamba-01 (1).jpg"
+                    },
+                    {
+                        "Dec": "",
+                        "Name": "Sidewinder MK II",
+                        "Path": "mathew-maddison-sidewinder-mkii-01.jpg"
+                    }
+                ],
+                "DecArticle": "",
+                "PathArticle": ""
             }
         ],
         "DecTheme": "",
-        "Theme": "123"
+        "PathTheme": "mathew-maddison-collection-of-wonders-01.jpg",
+        "Theme": "Elite Ships"
     }
 ]
 }
